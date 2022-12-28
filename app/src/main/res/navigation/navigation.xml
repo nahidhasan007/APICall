@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listPosts">
+
+    <fragment
+        android:id="@+id/listPosts"
+        android:name="com.example.retrofitapi.ui.list.ListPosts"
+        android:label="fragment_list_posts"
+        tools:layout="@layout/fragment_list_posts" >
+        <action
+            android:id="@+id/action_listPosts_to_detailPost"
+            app:destination="@id/detailPost"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPost"
+        android:name="com.example.retrofitapi.ui.detail.DetailPost"
+        android:label="fragment_detail_post"
+        tools:layout="@layout/fragment_detail_post" >
+        <action
+            android:id="@+id/action_detailPost_to_listPosts"
+            app:destination="@id/listPosts"
+            app:popUpTo="@id/detailPost"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="Id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
