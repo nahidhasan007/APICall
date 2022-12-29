@@ -1,4 +1,4 @@
-package com.example.retrofitapi.ui
+package com.example.retrofitapi.ui.list
 
 import com.example.retrofitapi.model.Model
 

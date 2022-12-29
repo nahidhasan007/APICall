@@ -1,7 +1,7 @@
-package com.example.retrofitapi.ui
+package com.example.retrofitapi.ui.list
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -26,6 +26,7 @@ class Adapter(private val clickListener: ClickHandler) : RecyclerView.Adapter<Ad
     override fun getItemCount(): Int {
         return post.size
     }
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(post:List<Model>)
     {
         this.post= post

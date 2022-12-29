@@ -2,7 +2,6 @@ package com.example.retrofitapi.ui.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.retrofitapi.network.RetrofitApi
 
 class ViewModelFactory(private val id: Int,private val repo : ApiRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
